@@ -13,17 +13,21 @@ class TodoList extends Component {
     this.handleItemChange = this.handleItemChange.bind(this);
   }
 
+  // 提交新的代办事项
   handleBtnClick() {
     this.setState({
       list: [...this.state.list, this.state.inputValue],
       inputValue: ''
     })
   }
+  // input 数据修改时同步数据
   handleInputChange(e) {
     this.setState({
       inputValue: e.target.value
     })
   }
+
+  // 删除某项
   handleItemChange(index) {
     const list = this.state.list;
     list.splice(index, 1);

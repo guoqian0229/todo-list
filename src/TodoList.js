@@ -33,6 +33,7 @@ class TodoList extends Component {
     list.splice(index, 1);
     this.setState({ list })
   }
+  // 获取项目的渲染内容
   getTodoItems(){
     return (
       this.state.list.map((item, index) => {
@@ -46,6 +47,7 @@ class TodoList extends Component {
     )
   }
 
+  // x
   render() {
     return (
       <Fragment>
